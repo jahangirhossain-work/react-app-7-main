@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Utility Holding — A diversified Saudi group delivering structured solutions and sustainable value across real estate, business services, facility management, and insulation." />
+    <meta name="theme-color" content="#18264F" />
+    <title>Utility Holding — Structured Solutions, Measurable Value</title>
+    <link rel="icon" type="image/svg+xml" href="./logos/utility-holding-icon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Inline initial loader styles so the loader appears instantly before CSS loads -->
+    <style>
+      html, body { margin: 0; padding: 0; background: #fff; }
+      #app-loader {
+        position: fixed; inset: 0; z-index: 99999;
+        display: flex; align-items: center; justify-content: center; flex-direction: column;
+        background: #18264F;
+        color: #fff;
+        font-family: 'Montserrat', system-ui, sans-serif;
+        transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      #app-loader.is-hidden { opacity: 0; pointer-events: none; }
+      #app-loader__logo {
+        width: 56px; height: 56px;
+        animation: app-loader-pulse 1.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      #app-loader__bar {
+        width: 120px; height: 2px; margin-top: 28px;
+        background: rgba(255,255,255,0.12); border-radius: 999px; overflow: hidden;
+      }
+      #app-loader__bar-fill {
+        width: 30%; height: 100%; background: #EE4823; border-radius: 999px;
+        animation: app-loader-slide 1.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+      }
+      @keyframes app-loader-pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(0.92); opacity: 0.7; }
+      }
+      @keyframes app-loader-slide {
+        0% { transform: translateX(-130%); }
+        100% { transform: translateX(430%); }
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-_BMsOSqX.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DErt0LfB.css">
+  </head>
+  <body>
+    <!-- Loader is rendered immediately, hidden by JS once React mounts -->
+    <div id="app-loader" aria-hidden="true">
+      <svg id="app-loader__logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 12 L14 38 C14 48.5 22 56 32 56 C42 56 50 48.5 50 38 L50 12" stroke="#EE4823" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div id="app-loader__bar"><div id="app-loader__bar-fill"></div></div>
+    </div>
+    <div id="root"></div>
+  </body>
+</html>
